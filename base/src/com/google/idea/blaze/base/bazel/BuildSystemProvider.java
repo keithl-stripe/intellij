@@ -167,6 +167,8 @@ public interface BuildSystemProvider {
     possibleBuildFileNames().forEach(s -> list.add(new ExactFileNameMatcher(s)));
     possibleWorkspaceFileNames().forEach(s -> list.add(new ExactFileNameMatcher(s)));
     list.add(new ExtensionFileNameMatcher("bzl"));
+    list.add(new ExtensionFileNameMatcher("sky"));
+    list.add(new ExtensionFileNameMatcher("star"));
     return list.build();
   }
 
